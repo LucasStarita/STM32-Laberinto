@@ -1,0 +1,10 @@
+18:18:53 **** Incremental Build of configuration Debug for project Autito_V1 ****
+make -j8 all 
+arm-none-eabi-size  Autito_V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49228	    124	   5052	  54404	   d484	Autito_V1.elf
+Finished building: default.size.stdout
+ 
+
+18:18:53 Build Finished. 0 errors, 0 warnings. (took 448ms)
+
