@@ -1,17 +1,10 @@
-19:15:10 **** Incremental Build of configuration Debug for project Autito_V1 ****
+20:09:21 **** Incremental Build of configuration Debug for project Autito_V1 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Autito_V1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sorteito\Desktop\backup_autito\STM32-Laberinto\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Autito_V1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Autito_V1.elf
- 
 arm-none-eabi-size  Autito_V1.elf 
-arm-none-eabi-objdump -h -S Autito_V1.elf  > "Autito_V1.list"
    text	   data	    bss	    dec	    hex	filename
-  49264	    124	   5060	  54448	   d4b0	Autito_V1.elf
+  49376	    124	   5068	  54568	   d528	Autito_V1.elf
 Finished building: default.size.stdout
  
-Finished building: Autito_V1.list
- 
 
-19:15:12 Build Finished. 0 errors, 0 warnings. (took 2s.189ms)
+20:09:22 Build Finished. 0 errors, 0 warnings. (took 803ms)
 

@@ -1,32 +1,4 @@
-18:43:02 **** Incremental Build of configuration Debug for project Autito_V1 ****
-make -j8 all 
-arm-none-eabi-size  Autito_V1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  49220	    124	   5060	  54404	   d484	Autito_V1.elf
-Finished building: default.size.stdout
- 
-18:43:09 **** Incremental Build of configuration Debug for project Autito_V1 ****
-make -j8 all 
-arm-none-eabi-size  Autito_V1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  49220	    124	   5060	  54404	   d484	Autito_V1.elf
-Finished building: default.size.stdout
- 
-18:43:36 **** Incremental Build of configuration Debug for project Autito_V1 ****
-make -j8 all 
-arm-none-eabi-size  Autito_V1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  49220	    124	   5060	  54404	   d484	Autito_V1.elf
-Finished building: default.size.stdout
- 
-18:46:26 **** Incremental Build of configuration Debug for project Autito_V1 ****
-make -j8 all 
-arm-none-eabi-size  Autito_V1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  49220	    124	   5060	  54404	   d484	Autito_V1.elf
-Finished building: default.size.stdout
- 
-18:50:14 **** Incremental Build of configuration Debug for project Autito_V1 ****
+20:07:16 **** Incremental Build of configuration Debug for project Autito_V1 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "Autito_V1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sorteito\Desktop\backup_autito\STM32-Laberinto\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Autito_V1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -35,101 +7,29 @@ Finished building target: Autito_V1.elf
 arm-none-eabi-size  Autito_V1.elf 
 arm-none-eabi-objdump -h -S Autito_V1.elf  > "Autito_V1.list"
    text	   data	    bss	    dec	    hex	filename
-  49256	    124	   5060	  54440	   d4a8	Autito_V1.elf
+  49376	    124	   5068	  54568	   d528	Autito_V1.elf
 Finished building: default.size.stdout
  
 Finished building: Autito_V1.list
  
-18:52:51 **** Incremental Build of configuration Debug for project Autito_V1 ****
+20:08:29 **** Incremental Build of configuration Debug for project Autito_V1 ****
 make -j8 all 
 arm-none-eabi-size  Autito_V1.elf 
    text	   data	    bss	    dec	    hex	filename
-  49256	    124	   5060	  54440	   d4a8	Autito_V1.elf
+  49376	    124	   5068	  54568	   d528	Autito_V1.elf
 Finished building: default.size.stdout
  
-18:53:51 **** Incremental Build of configuration Debug for project Autito_V1 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Autito_V1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sorteito\Desktop\backup_autito\STM32-Laberinto\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Autito_V1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Autito_V1.elf
- 
-arm-none-eabi-size  Autito_V1.elf 
-arm-none-eabi-objdump -h -S Autito_V1.elf  > "Autito_V1.list"
-   text	   data	    bss	    dec	    hex	filename
-  49264	    124	   5060	  54448	   d4b0	Autito_V1.elf
-Finished building: default.size.stdout
- 
-Finished building: Autito_V1.list
- 
-18:55:51 **** Incremental Build of configuration Debug for project Autito_V1 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Autito_V1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sorteito\Desktop\backup_autito\STM32-Laberinto\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Autito_V1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Autito_V1.elf
- 
-arm-none-eabi-size  Autito_V1.elf 
-arm-none-eabi-objdump -h -S Autito_V1.elf  > "Autito_V1.list"
-   text	   data	    bss	    dec	    hex	filename
-  49264	    124	   5060	  54448	   d4b0	Autito_V1.elf
-Finished building: default.size.stdout
- 
-Finished building: Autito_V1.list
- 
-19:02:25 **** Incremental Build of configuration Debug for project Autito_V1 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Autito_V1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sorteito\Desktop\backup_autito\STM32-Laberinto\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Autito_V1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Autito_V1.elf
- 
-arm-none-eabi-size  Autito_V1.elf 
-arm-none-eabi-objdump -h -S Autito_V1.elf  > "Autito_V1.list"
-   text	   data	    bss	    dec	    hex	filename
-  49264	    124	   5060	  54448	   d4b0	Autito_V1.elf
-Finished building: default.size.stdout
- 
-Finished building: Autito_V1.list
- 
-19:03:38 **** Incremental Build of configuration Debug for project Autito_V1 ****
-make -j8 all 
-arm-none-eabi-gcc "../USB_HOST/Target/usbh_conf.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_HOST/Target/usbh_conf.d" -MT"USB_HOST/Target/usbh_conf.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/Target/usbh_conf.o"
-arm-none-eabi-gcc "../USB_HOST/App/usb_host.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_HOST/App/usb_host.d" -MT"USB_HOST/App/usb_host.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/App/usb_host.o"
-arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.o"
-arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.o"
-arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.o"
-arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.o"
-arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
-arm-none-eabi-gcc -o "Autito_V1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sorteito\Desktop\backup_autito\STM32-Laberinto\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Autito_V1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Autito_V1.elf
- 
-arm-none-eabi-size  Autito_V1.elf 
-arm-none-eabi-objdump -h -S Autito_V1.elf  > "Autito_V1.list"
-   text	   data	    bss	    dec	    hex	filename
-  49264	    124	   5060	  54448	   d4b0	Autito_V1.elf
-Finished building: default.size.stdout
- 
-Finished building: Autito_V1.list
- 
-19:07:57 **** Incremental Build of configuration Debug for project Autito_V1 ****
+20:08:52 **** Incremental Build of configuration Debug for project Autito_V1 ****
 make -j8 all 
 arm-none-eabi-size  Autito_V1.elf 
    text	   data	    bss	    dec	    hex	filename
-  49264	    124	   5060	  54448	   d4b0	Autito_V1.elf
+  49376	    124	   5068	  54568	   d528	Autito_V1.elf
 Finished building: default.size.stdout
  
-19:15:10 **** Incremental Build of configuration Debug for project Autito_V1 ****
+20:09:21 **** Incremental Build of configuration Debug for project Autito_V1 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Autito_V1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sorteito\Desktop\backup_autito\STM32-Laberinto\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Autito_V1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Autito_V1.elf
- 
 arm-none-eabi-size  Autito_V1.elf 
-arm-none-eabi-objdump -h -S Autito_V1.elf  > "Autito_V1.list"
    text	   data	    bss	    dec	    hex	filename
-  49264	    124	   5060	  54448	   d4b0	Autito_V1.elf
+  49376	    124	   5068	  54568	   d528	Autito_V1.elf
 Finished building: default.size.stdout
- 
-Finished building: Autito_V1.list
  
