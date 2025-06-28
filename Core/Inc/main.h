@@ -103,9 +103,8 @@ void Error_Handler(void);
 #define LED_ROJO_GPIO_Port GPIOD
 #define LED_AZUL_Pin GPIO_PIN_15
 #define LED_AZUL_GPIO_Port GPIOD
-#define pared_delante_Pin GPIO_PIN_6
-#define pared_delante_GPIO_Port GPIOC
-#define pared_delante_EXTI_IRQn EXTI9_5_IRQn
+#define sensor_pared_Pin GPIO_PIN_6
+#define sensor_pared_GPIO_Port GPIOC
 #define sensor_linea_Pin GPIO_PIN_7
 #define sensor_linea_GPIO_Port GPIOC
 #define sensor_linea_EXTI_IRQn EXTI9_5_IRQn

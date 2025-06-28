@@ -65,9 +65,10 @@ typedef struct {
 #define CANTIDAD_BUFFER_MINIMO 2
 // Tamaño del buffer a imlementar
 #define BUFFER_TOTAL (CANTIDAD_BUFFER_MINIMO * BUFFER_MINIMO)
-#define SEL_AUTITO 0
+#define SEL_AUTITO 1
 #define N 16             // Define el tamaño del mapa (NxN)
 #define INF (N+1)         // Valor asignado como peso "inf"
+#define delay 50
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -115,7 +116,7 @@ int cont_posible_linea;
 volatile uint16_t UMBRAL_DERECHO;  //1850
 volatile uint16_t UMBRAL_IZQUIERDO;  //290
 char mensaje[16]; //Variable mensaje (contiene los datos a enviar)
-const uint8_t delay = 50; //Retardo a utilizar durante la transmisión
+//const uint8_t delay = 50; //Retardo a utilizar durante la transmisión
 
 volatile uint16_t contpared;
 volatile uint16_t contlinea;
@@ -171,11 +172,11 @@ void Calibrar_Sensores(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void Transmision() { //Envia un mensaje a través de la UART
-strcat(mensaje, "\r\n"); //Agrega instrucciones de retorno de carro y avance de línea al mensaje
-HAL_UART_Transmit(&huart5, (uint8_t*) mensaje, strlen(mensaje), delay); //Transmisión del mensaje
+//void Transmision() { //Envia un mensaje a través de la UART volado
+//strcat(mensaje, "\r\n"); //Agrega instrucciones de retorno de carro y avance de línea al mensaje
+//HAL_UART_Transmit(&huart5, (uint8_t*) mensaje, strlen(mensaje), delay); //Transmisión del mensaje
 
-}
+//}
 /* USER CODE END 0 */
 
 /**
@@ -264,15 +265,18 @@ int main(void)
 			}
 			else
 				linea = 0;
+		}
 
-		}
-		if (pared == 1) {
-			contpared++;
-			detectorParedes(mapa);                              //mayonesa
-			ActualizarPesos10(mapa);
-			dir_min = DirMin(mapa);
-			pared = 0;
-		}
+    		// reviso si hay pared
+
+//		if (HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_6)==GPIO_PIN_RESET) {
+//			contpared++;
+//			detectorParedes(mapa);                              //mayonesa
+//			ActualizarPesos10(mapa);
+//			dir_min = DirMin(mapa);
+//		}
+
+
 
 		if (orientacion == dir_min)
 			Centrado();
@@ -280,7 +284,6 @@ int main(void)
 			direccion_de_giro = PrioridadDeGiro(dir_min);
 			Girar(direccion_de_giro);
 			calcular_orientacion(direccion_de_giro);
-			pared = 0;
 			Frenar();
 			HAL_Delay(200);
 //			Retroceder();
@@ -758,11 +761,17 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : pared_delante_Pin sensor_linea_Pin */
-  GPIO_InitStruct.Pin = pared_delante_Pin|sensor_linea_Pin;
+  /*Configure GPIO pin : sensor_pared_Pin */
+  GPIO_InitStruct.Pin = sensor_pared_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(sensor_pared_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : sensor_linea_Pin */
+  GPIO_InitStruct.Pin = sensor_linea_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+  HAL_GPIO_Init(sensor_linea_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : I2S3_SCK_Pin */
   GPIO_InitStruct.Pin = I2S3_SCK_Pin;
@@ -1067,8 +1076,8 @@ void posicion(void) { //norte=0, este=1, sur=2, oeste=
 		pos = (pos + 4);
 	else if (orientacion == 3 && (pos % 4 != 0))
 		pos = (pos - 1);
-	sprintf(mensaje, "%d", pos); //Convierte la variable numérica contador en un string
-	Transmision(); //Ejecuta la función de transmisión
+//	sprintf(mensaje, "%d", pos); //Convierte la variable numérica contador en un string
+//	Transmision(); //Ejecuta la función de transmisión    //volado
 }
 
 void detectorParedes(celda *mapa) {
@@ -1203,14 +1212,11 @@ int DirMin(celda *mapa) {
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 	ENTRE_INT=1;
-	if (GPIO_Pin == GPIO_PIN_6) {
-
-		pared = 1;
 
 
 
 
-	} else if (GPIO_Pin == GPIO_PIN_7) {
+ if (GPIO_Pin == GPIO_PIN_7) {
 
 		linea = 1;
 
