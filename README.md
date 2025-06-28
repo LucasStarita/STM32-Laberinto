@@ -3,6 +3,10 @@
 **Proyecto de Sistemas Digitales**  
 Universidad Nacional de Mar del Plata – Área Electrónica y Computación
 
+## 👥 Autores
+
+Lucas Starita, Franco Rabini, Santiago Benjamin Loza, Santiago Mosler, Gian Dylan Pipoli.
+
 ## 📝 Descripción
 
 Este proyecto consiste en el desarrollo de un robot autónomo que debe escapar de un laberinto en el menor tiempo posible utilizando un microcontrolador **STM32F407VGT6**.
